@@ -1,0 +1,191 @@
+%%%% -- Encoding UTF-8 without BOM
+%%%% -- XeLaTeX => PDF (BIBER)
+
+\documentclass[English]{cv-style}     % Add 'print' as an option into the square bracket to remove colours from this template for printing. 
+
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+
+\usepackage{pdfcomment}
+
+\usepackage{tikzsymbols}
+\newfontfamily\DejaSans{DejaVu Sans}
+
+\begin{document}
+
+\header{~~~~~~~Dominik }{Maszczyk}
+\lastupdated
+
+%----------------------------------------------------------------------------------------
+% SIDEBAR SECTION  -- In the aside, each new line forces a line break
+%----------------------------------------------------------------------------------------
+\begin{aside}
+\vspace{-0.9cm}
+\color{textcolor}
+\adjincludegraphics[height=5cm,trim={{.1\width} {.2\height} {.1\width} {.08\height}},clip]{22}
+%
+\section{Personal information}
+27 years old, polish
+\href{https://www.linkedin.com/in/dominik-maszczyk/}{LinkedIn}
+\href{https://github.com/Skitionek}{GitHub}
+%
+\section{Contact}
+\href{mailto:Skitionek@gmail.com?to=&subject=You have got an offer&body=Dear Dominik,\%0D\%0Aas the best of candidates, we are glad to inform you that you have been approved for position in our company.\%0D\%0AWe are looking forward to hearing from you soon.\%0D\%0A \%0D\%0A Congratulations,\%0D\%0A Your future employer}{Skitionek@gmail.com}
+%
+\section{Languages}
+English (fluent) 
+(\href{https://drive.google.com/open?id=0BydN6U89jIk1X0xEVHpGenhJM00}{TOEFL IB 96 pts})
+German (A2)
+% Korean (A1)
+Polish (native) 
+%
+\section{\pdfmarkupcomment[markup=Underline,color=gray,height=1em]{Programming}{\& Scripting} languages%{\color{red} \small $\varheartsuit$}
+}
+ Javascript, C, C++,\\ Java, G, VHDL,\\ Bash, Python
+%
+\section{Worked with}
+Full-stack~development, 
+Distributed~systems, 
+Embedded~systems, 
+Databases, 
+FPGAs, \LaTeX, 
+Version-control, 
+Machine learning models, 
+EMG based interface, 
+GPS signals analysis,
+OS development, 
+PCB design,
+Battery pack development,
+Power electronics in EV
+%
+\end{aside}
+%----------------------------------------------------------------------------------------
+% RESUMEN SECTION
+%----------------------------------------------------------------------------------------
+\vspace{0.2cm}
+\section{resume}
+  \vspace{-0.2cm}
+Technology passionate with hundreds ideas per minute; skilful electrical engineer within expertise in automotive applications and experienced full-stack developer.
+%----------------------------------------------------------------------------------------
+% EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+  \vspace{-0.1cm}
+\section{education}
+  \vspace{-0.2cm}
+\begin{entrylist}
+%------------------------------------------------
+\vspace{-0.1cm}
+\entry
+{\scalebox{.8}[1.0]{2016--2018}}
+{Dual degree programme: Master of Science in Electrical Engineering}
+{
+    \begin{flushright}
+    Copenhagen, Denmark\\
+    Taejon, South Korea
+    \end{flushright}
+}
+{
+  \vspace{-0.6cm}
+    {\jobtitle{\href{http://www.dtu.dk/}{Technical University of Denmark (DTU)}}} \\
+    \vspace{.3em}\hspace*{.5em} \href{https://www.dtu.dk/english/news/2018/06/dtu-moves-up-in-qs-world-university-rankings?id=b59080a6-74a5-41cb-9268-a6bb4f41555f}{best ranked among the Nordic countries.} \\
+    {\jobtitle{\href{http://www.kaist.edu/}{Korea Advanced Institute of Science and Technology (KAIST)}}}\\
+    \vspace{.3em}\hspace*{.5em} \href{https://www.topuniversities.com/universities/kaist-korea-advanced-institute-science-technology#sub}{ranked number 14. in the world}.
+    \vspace{.2em} \\
+    Associated with laboratories \href{http://www.cad4x.kaist.ac.kr/}{CAD4X} and \href{http://www.powerlab.dk/facilities/drivesandconverterlab}{Drives Lab}.\\
+    Thesis: \textit{"Control system of electric formula racer"}.}
+    
+%------------------------------------------------
+\entry
+{\scalebox{.8}[1.0]{07.2018}}
+{\jobtitle{\href{https://www.imeche.org/events/formula-student}{Extracurricular - Formula Student}}}
+{Silverstone Circuit, United Kingdom}
+{Participation in student engineering competition as DTU's EV team.}
+%------------------------------------------------
+\entry
+{\scalebox{.8}[1.0]{2012--2016}}
+{
+    Bachelor's degree: Electrical, Electronics and Communications Engineering
+}
+{
+    \begin{flushright}
+        Gdansk, Poland\\
+        Karlsruhe, Germany
+    \end{flushright}
+}
+{
+  \vspace{-0.6cm}
+    {\jobtitle{
+        \href{https://www.pg.edu.pl}{Gdansk University of Technology (PG)} \\
+        \href{http://www.kit.edu/}{Karlsruhe Institute of Technology (KIT)}
+    }} \\
+    Including one year of courses lead by top \href{https://en.wikipedia.org/wiki/German_Aerospace_Center}{\textit{German Aerospace Center}} scientists (directly working on the projects). Which gave me in depth understanding principles and challenges in InSAR data analysis, especially considering TanDEM-X mission. \\
+    Thesis: "On the Sensitivity of FPGA Configuration Bits to Radiation-induced Soft Errors".
+}
+%------------------------------------------------
+\end{entrylist}
+%----------------------------------------------------------------------------------------
+% WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+  \vspace{-0.1cm}
+\section{experience}
+  \vspace{-0.2cm}
+\begin{entrylist}
+%------------------------------------------------
+  \vspace{-0.4cm}
+\entry
+  {\scalebox{.8}[1.0]{2019 -- now}}
+  {Research assistant}
+  {Copenhagen, Denmark}
+  {}
+\entry
+  {\scalebox{.8}[1.0]{2016 -- 2019}}
+  {Software Engineer for synthetic biology web platform}
+  {}
+  {\jobtitle{\href{http://www.biosustain.dtu.dk/}{Novo Nordisk Foundation Center for Biosustainability}}\\
+   Over three years of experience in providing content-rich, appealing and performant data visualisations. Core developer for back as well as front-end solutions.  
+   \small{\color{textcolor}React, Google Cloud, Kubernetes, Docker, GraphQL}
+}
+%------------------------------------------ ------
+\vspace{-0.3cm}
+\entry
+  {\scalebox{.8}[1.0]{2018 -- 2019}}
+  {Electrical Engineer}
+  {Yongin, South Korea}
+  {\jobtitle{EMVcom}\\
+  Developing control unit and battery pack for electric vehicle. Responsibility for overall electrical system design, including PCBs design and consulting over the whole project.\vspace{0.5em}}
+%------------------------------------------ ------
+\vspace{-0.3cm}
+\entry
+  {\scalebox{.8}[1.0]{2016}}
+  {Student assistant}
+  {Karlsruhe, Germany}
+  {\jobtitle{\href{http://www.kit.edu/}{Karlsruhe Institute of Technology (KIT)}}\\
+  Research on radiation induced soft errors in FPGA configuration bits.\vspace{0.5em}}
+%------------------------------------------ ------
+\vspace{-0.3cm}
+\entry
+  {\scalebox{.8}[1.0]{2015}}
+  {Internship}
+  {Sopot Poland}
+  {}
+%------------------------------------------------
+\end{entrylist}
+%----------------------------------------------------------------------------------------
+% AWARDS SECTION
+%----------------------------------------------------------------------------------------  
+
+  \vspace{-0.2cm}
+%----------------------------------------------------------------------------------------
+% INTERESTS SECTION
+%----------------------------------------------------------------------------------------3
+% \section{skills}
+%   \vspace{-0.2cm}
+% \textbf{Operational systems} in depth understanding and ability to write low level code. From solving tasks on micro-controllers through real-time systems up to OS design  \href{https://web.stanford.edu/class/cs140/projects/pintos/pintos.html#SEC_Top}{(completed MIT originated Pintos course)}
+
+% Can solve \textbf{programming} tasks especially in C/C++, Assembler and Java. Plus scripting languages: Python, Bash, JavaScript.
+
+% \textbf{Automotive} Designing embedded systems for automotive applications. I have been working on projects as Jeep Wrangler EV conversion; Genesis EV racing conversion; electric car project (Korea); student formula electric bolide (Denmark).
+
+% \textbf{Machine learning} As one of the engineering tools I am familiar with machine learning methods, I have completed related university courses from basic usage to design of underlying models.
+%----------------------------------------------------------------------------------------
+\end{document}
