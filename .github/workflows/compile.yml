@@ -1,0 +1,23 @@
+name: Compile
+run-name: Compiling - ${{ github.event.head_commit.messsage }}
+on: [push]
+jobs:
+  Compile:
+    steps:
+    - name: Checkout
+      uses: actions/checkout@latest
+
+    - name: Compile
+      uses: xu-cheng/latex-action@latest
+      with:
+        root_file: main.tex
+        latexmk_use_xelatex: true
+        extra_fonts: |
+          fonts/*
+
+    - name: Release
+      uses: marvinpinto/action-automatic-releases@latest
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        files: |
+          main.pdf
