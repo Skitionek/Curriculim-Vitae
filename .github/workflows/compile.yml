@@ -6,10 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@latest
+      uses: actions/checkout@v3
 
     - name: Compile
-      uses: xu-cheng/latex-action@latest
+      uses: xu-cheng/latex-action@v2
       with:
         root_file: main.tex
         latexmk_use_xelatex: true
