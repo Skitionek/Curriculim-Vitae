@@ -3,6 +3,7 @@ run-name: Compiling - ${{ github.event.head_commit.messsage }}
 on: [push]
 jobs:
   Compile:
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@latest
