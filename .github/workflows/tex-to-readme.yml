@@ -1,0 +1,45 @@
+name: TeX to README
+
+"on":
+  push:
+    paths:
+      - main.tex
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Pandoc
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+
+      - name: Convert TeX to Markdown
+        run: |
+          pandoc main.tex \
+            --from=latex \
+            --to=gfm \
+            --output=README.md
+
+      - name: Commit README changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add README.md
+
+          if git diff --cached --quiet; then
+            echo "No README changes detected."
+            exit 0
+          fi
+
+          git commit -m "docs: update README generated from main.tex"
+          git push
