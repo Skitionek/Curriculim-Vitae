@@ -1,6 +1,12 @@
 name: Publish GitHub Page
 run-name: Compiling - ${{ github.event.head_commit.message }}
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -24,7 +30,6 @@ jobs:
       uses: xu-cheng/latex-action@v2
       with:
         root_file: main.tex
-        working_directory: ${{ steps.create_dist.outputs.dist_dir }}
         latexmk_use_xelatex: true
         args: -pdfxe -interaction=nonstopmode
         extra_fonts: |
@@ -37,6 +42,8 @@ jobs:
 
     - name: Prepare GitHub Pages
       run: |
+        cp main.pdf "${{ steps.create_dist.outputs.dist_dir }}/main.pdf"
+
         pandoc main.tex \
           --from=latex \
           --to=html5 | awk '
@@ -58,6 +65,7 @@ jobs:
 
   Deploy:
     needs: Compile
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
