@@ -1,0 +1,68 @@
+name: Publish GitHub Page
+run-name: Compiling - ${{ github.event.head_commit.message }}
+on: [push]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  Compile:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Create temporary dist directory
+      id: create_dist
+      run: |
+        dist_dir="$(mktemp -d)"
+        echo "dist_dir=$dist_dir" >> "${GITHUB_OUTPUT}"
+
+    - name: Compile
+      uses: xu-cheng/latex-action@v2
+      with:
+        root_file: main.tex
+        working_directory: ${{ steps.create_dist.outputs.dist_dir }}
+        latexmk_use_xelatex: true
+        args: -pdfxe -interaction=nonstopmode
+        extra_fonts: |
+          fonts/*
+
+    - name: Install Pandoc
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y pandoc
+
+    - name: Prepare GitHub Pages
+      run: |
+        pandoc main.tex \
+          --from=latex \
+          --to=html5 | awk '
+          NR == FNR {
+            fragment = fragment $0 ORS
+            next
+          }
+          $0 == "{{CV_FRAGMENT}}" {
+            printf "%s", fragment
+            next
+          }
+          { print }
+        ' - .github/templates/cv-page.html > ${{ steps.create_dist.outputs.dist_dir }}/index.html
+
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ${{ steps.create_dist.outputs.dist_dir }}
+
+  Deploy:
+    needs: Compile
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deploy
+      uses: actions/deploy-pages@v4

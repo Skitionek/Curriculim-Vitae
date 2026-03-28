@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --page-bg: #eef2f8;
+      --page-glow: radial-gradient(circle at 15% 15%, #dfe9fb 0%, transparent 45%),
+                   radial-gradient(circle at 85% 10%, #f7e8d6 0%, transparent 42%);
+      --card-bg: #ffffffcc;
+      --card-border: #cfd7e6;
+      --text-main: #1a2535;
+      --text-muted: #4b5b72;
+      --heading: #0f1d32;
+      --accent: #0d5ea8;
+      --accent-contrast: #ffffff;
+      --button-bg: #f8fbff;
+      --button-border: #bad0ea;
+      --button-hover-bg: #eaf3ff;
+      --divider: #d7dfeb;
+      --shadow: 0 14px 34px -22px rgba(26, 37, 53, 0.45);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --page-bg: #0c1118;
+        --page-glow: radial-gradient(circle at 15% 15%, #123a65 0%, transparent 40%),
+                     radial-gradient(circle at 85% 10%, #3a2a1d 0%, transparent 35%);
+        --card-bg: #121b28d4;
+        --card-border: #273447;
+        --text-main: #dbe6f5;
+        --text-muted: #a7b8cf;
+        --heading: #f0f6ff;
+        --accent: #78b7ff;
+        --accent-contrast: #0d1a2c;
+        --button-bg: #172233;
+        --button-border: #30455f;
+        --button-hover-bg: #213049;
+        --divider: #2b3a4f;
+        --shadow: 0 14px 34px -20px rgba(0, 0, 0, 0.75);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html {
+      font-size: clamp(15px, 0.25vw + 14px, 17px);
+    }
+    body {
+      margin: 0;
+      min-height: 100svh;
+      padding: clamp(0.75rem, 1.2vw + 0.6rem, 2rem);
+      color: var(--text-main);
+      background: var(--page-glow), var(--page-bg);
+      font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", sans-serif;
+    }
+    .container {
+      width: min(980px, 100%);
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      backdrop-filter: blur(8px);
+      box-shadow: var(--shadow);
+      padding: clamp(1.1rem, 1.4vw + 0.8rem, 2.2rem);
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.1rem;
+      border-bottom: 1px solid var(--divider);
+      padding-bottom: 0.9rem;
+    }
+    .header h1 {
+      margin: 0;
+      color: var(--heading);
+      font-size: clamp(1.3rem, 1.2rem + 1vw, 1.8rem);
+      letter-spacing: 0.01em;
+    }
+    .actions {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .mobile-actions {
+      display: none;
+    }
+    .button {
+      display: inline-block;
+      padding: 0.5rem 0.85rem;
+      border-radius: 10px;
+      border: 1px solid var(--button-border);
+      color: var(--heading);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.93rem;
+      background: var(--button-bg);
+      transition: background-color 120ms ease, border-color 120ms ease, transform 120ms ease;
+    }
+    .button:hover {
+      background: var(--button-hover-bg);
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+    .button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    .cv {
+      color: var(--text-main);
+      font-size: 1rem;
+      overflow-wrap: anywhere;
+    }
+    .cv :is(h1, h2, h3) {
+      color: var(--heading);
+      margin-top: 1.45rem;
+      margin-bottom: 0.55rem;
+      line-height: 1.25;
+    }
+    .cv h1 {
+      font-size: 1.38rem;
+      border-bottom: 1px solid var(--divider);
+      padding-bottom: 0.35rem;
+    }
+    .cv h2 { font-size: 1.2rem; }
+    .cv h3 { font-size: 1.05rem; }
+    .cv p, .cv li {
+      line-height: 1.62;
+      color: var(--text-main);
+    }
+    .cv a {
+      color: var(--accent);
+      text-underline-offset: 2px;
+    }
+    .cv a:hover { text-decoration-thickness: 2px; }
+    .cv ul { padding-left: 1.25rem; }
+    .cv img,
+    .cv svg,
+    .cv table,
+    .cv pre {
+      max-width: 100%;
+    }
+    .cv table {
+      display: block;
+      overflow-x: auto;
+      border-collapse: collapse;
+    }
+    .cv pre {
+      overflow-x: auto;
+      padding: 0.75rem;
+      border-radius: 10px;
+      background: color-mix(in srgb, var(--button-bg) 70%, transparent);
+    }
+    .cv hr {
+      border: 0;
+      border-top: 1px solid var(--divider);
+      margin: 1.1rem 0;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        border-radius: 14px;
+        padding: clamp(1rem, 2.6vw, 1.5rem);
+      }
+      .header {
+        margin-bottom: 0.9rem;
+        padding-bottom: 0.75rem;
+      }
+      .cv h1 { font-size: 1.28rem; }
+      .cv h2 { font-size: 1.14rem; }
+      .cv h3 { font-size: 1rem; }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 0.55rem;
+      }
+      .container {
+        border-radius: 12px;
+      }
+      .header {
+        gap: 0.7rem;
+      }
+      .header .actions {
+        display: none;
+      }
+      .mobile-actions {
+        position: sticky;
+        top: calc(env(safe-area-inset-top, 0px) + 0.35rem);
+        z-index: 25;
+        display: flex;
+        gap: 0.45rem;
+        margin: 0 0 0.9rem;
+        padding: 0.45rem;
+        border: 1px solid var(--card-border);
+        border-radius: 12px;
+        background: color-mix(in srgb, var(--card-bg) 82%, transparent);
+        backdrop-filter: blur(10px);
+      }
+      .actions {
+        width: 100%;
+      }
+      .button,
+      .mobile-actions .button {
+        flex: 1;
+        min-width: 8.5rem;
+        text-align: center;
+      }
+      .cv {
+        font-size: 0.97rem;
+      }
+      .cv ul {
+        padding-left: 1rem;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .button {
+        width: 100%;
+      }
+      .cv p,
+      .cv li {
+        line-height: 1.56;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="header">
+      <h1>Curriculum Vitae</h1>
+      <div class="actions">
+        <a class="button" href="main.pdf" download>PDF</a>
+      </div>
+    </div>
+    <div class="mobile-actions" aria-label="Document actions">
+      <a class="button" href="main.pdf">PDF</a>
+    </div>
+    <article class="cv">
+{{CV_FRAGMENT}}
+    </article>
+  </main>
+</body>
+</html>
