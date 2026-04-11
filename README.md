@@ -34,9 +34,11 @@ complex data workflows into reliable, maintainable systems.
 
 # Professional Experience
 
-**Senior Software Engineer** *[DTU
-Biosustain](https://www.biosustain.dtu.dk/)*  
-*Mar 2025 – Present, Copenhagen*
+**[Novo Nordisk Foundation Center for
+Biosustainability](https://www.biosustain.dtu.dk/)** *Oct 2016 –
+Present*
+
+*Senior Software Engineer* *Mar 2025 – Present, Copenhagen*
 
 - Designed systems for unified data storage, access control, and
   provenance tracking.
@@ -49,13 +51,11 @@ Biosustain](https://www.biosustain.dtu.dk/)*
 - Introduced CI/CD pipelines improving reliability and deployment
   quality.
 
-**Software Engineer** *[Novo Nordisk Foundation Center for
-Biosustainability](https://www.biosustain.dtu.dk/)*  
-*Jun 2022 – Dec 2024*
+*Software Engineer* *Jun 2022 – Dec 2024, Copenhagen*
 
 - Core contributor to [Lifelike platform](https://lifelike.bio).
 
-- Authored **75% of the codebase** across frontend, backend, and
+- Authored **7̃5% of the codebase** across frontend, backend, and
   services.
 
 - Built full-stack system (Angular + TypeScript, Python + Flask).
@@ -66,15 +66,14 @@ Biosustainability](https://www.biosustain.dtu.dk/)*
 - Developed data processing and LLM-based services supporting scientific
   workflows.
 
-**Software Engineer (On-site)** *[UC San Diego](https://ucsd.edu)*  
-*Feb 2022 – May 2022*
+*Software Engineer (On-site)* *Feb 2022 – May 2022, [UC San
+Diego](https://ucsd.edu)*
 
 - Collaborated with distributed teams on platform development and
   integration.
 
-**Research Assistant → Software Engineer** *[DTU
-Biosustain](https://www.biosustain.dtu.dk/)*  
-*Oct 2016 – May 2022*
+*Research Assistant → Software Engineer* *Oct 2016 – May 2022,
+Copenhagen*
 
 - Developed full-stack features for synthetic biology platform.
 
