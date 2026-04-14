@@ -10,7 +10,7 @@ Copenhagen, Denmark
 
 # Profile
 
-Senior Software Engineer with 8+ years of experience building
+Senior Software Engineer with 9+ years of experience building
 data-intensive platforms in the bioinformatics domain. I specialize in
 scalable data architectures and developer tooling, with strong ownership
 of production systems — including authoring the majority of a complex
