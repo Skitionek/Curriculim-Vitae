@@ -118,4 +118,4 @@ Institute of Technology](https://www.kit.edu/english/) – 2016
 
 # Languages
 
-English (Professional), Polish (Native)
+English (Professional), Polish (Native), Danish (Beginner)
