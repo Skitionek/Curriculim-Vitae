@@ -53,7 +53,9 @@ Present*
 
 *Software Engineer* *Jun 2022 – Dec 2024, Copenhagen*
 
-- Core contributor to [Lifelike platform](https://lifelike.bio); actively developing fork at [skitionek/lifelike](https://github.com/skitionek/lifelike).
+- Core contributor to [Lifelike platform](https://lifelike.bio);
+  actively developing fork at
+  [skitionek/lifelike](https://github.com/skitionek/lifelike).
 
 - Authored **7̃5% of the codebase** across frontend, backend, and
   services.
