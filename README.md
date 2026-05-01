@@ -10,27 +10,31 @@ Copenhagen, Denmark
 
 # Profile
 
-Senior Software Engineer with 9+ years of experience building
-data-intensive platforms in the bioinformatics domain. I specialize in
-scalable data architectures and developer tooling, with strong ownership
-of production systems — including authoring the majority of a complex
-scientific platform. I bridge research and engineering by turning
-complex data workflows into reliable, maintainable systems.
+Senior engineer with 9+ years of experience building scientific data
+platforms at the intersection of IT and life science research. I combine
+hands-on Python and full-stack development with technical leadership —
+contributing to roadmap, prioritization, and long-term sustainability in
+close collaboration with researchers. I have worked closely with
+bio-chemical research groups, and I take pride in translating ambiguous
+scientific needs into maintainable solutions.
 
 # Core Competencies
 
-- Scalable data platforms (distributed systems, multi-database
-  architectures)
+- Technical leadership: contributing to roadmap and prioritization
 
-- Bioinformatics and scientific software development
+- Scientific data platforms for genomics, proteomics, and bioinformatics
+  research groups
 
-- Full-stack development (TypeScript, Python, Angular, React)
+- Multi-database architectures (PostgreSQL, Neo4j, ArangoDB, Redis,
+  Elasticsearch)
 
-- Knowledge graphs and data modeling (Neo4j, ArangoDB)
+- Distributed systems and message queues experience
 
-- Cloud infrastructure (Kubernetes, Azure, Google Cloud)
+- DevOps, CI/CD, and open-source tool integration
 
-- Developer tooling and workflow optimization (Nextflow ecosystem)
+- Full-stack development (TypeScript, Angular, React, Python/Flask)
+
+- Agile ways of working and cross-functional team collaboration
 
 # Professional Experience
 
@@ -40,33 +44,33 @@ Present*
 
 *Senior Software Engineer* *Mar 2025 – Present, Copenhagen*
 
+- Contributed to platform roadmap and prioritization in collaboration
+  with researchers, bioinformaticians, and management.
+
 - Designed systems for unified data storage, access control, and
-  provenance tracking.
+  provenance tracking across scientific workflows.
 
-- Improved reproducibility of research workflows through data
-  architecture design.
+- Improved reproducibility and traceability of research workflows
+  through data architecture design.
 
-- Maintained and scaled cloud applications on Azure.
-
-- Introduced CI/CD pipelines improving reliability and deployment
-  quality.
+- Maintained and scaled cloud-based research applications on Azure;
+  introduced CI/CD pipelines.
 
 *Software Engineer* *Jun 2022 – Dec 2024, Copenhagen*
 
-- Core contributor to [Lifelike platform](https://lifelike.bio);
-  actively developing fork at
+- Core contributor to [Lifelike platform](https://lifelike.bio) — a
+  scientific knowledge graph and data visualization system for
+  bioinformaticians; fork at
   [skitionek/lifelike](https://github.com/skitionek/lifelike).
 
 - Authored **7̃5% of the codebase** across frontend, backend, and
-  services.
+  services (Python/Flask, Angular/TypeScript).
 
-- Built full-stack system (Angular + TypeScript, Python + Flask).
+- Built data processing pipelines, modeling and generating aggregated
+  graph databases (Ecocyc, Pubmed, KEGG etc.).
 
-- Designed integrations across PostgreSQL, Neo4j, ArangoDB, Redis, and
-  Elasticsearch.
-
-- Developed data processing and LLM-based services supporting scientific
-  workflows.
+- Collaborated directly with scientists and bioinformaticians to
+  translate research needs into platform features.
 
 *Software Engineer (On-site)* *Feb 2022 – May 2022, [UC San
 Diego](https://ucsd.edu)*
