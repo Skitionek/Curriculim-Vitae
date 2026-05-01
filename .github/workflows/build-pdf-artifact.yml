@@ -1,0 +1,31 @@
+name: Build PDF Artifact
+run-name: Build CV PDF
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Compile PDF
+      uses: xu-cheng/latex-action@v2
+      with:
+        root_file: main.tex
+        latexmk_use_xelatex: true
+        args: -pdfxe -interaction=nonstopmode
+        extra_fonts: |
+          fonts/*
+
+    - name: Upload PDF artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: cv-pdf
+        path: main.pdf
+        if-no-files-found: error
