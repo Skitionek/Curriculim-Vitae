@@ -96,9 +96,9 @@ tooling
 
 - Focused on developer experience and workflow introspection.
 
-**[skitionek/mycelium](https://github.com/Skitionek/mycelium)**
+**[Skitionek/mycelium](https://github.com/Skitionek/mycelium)**
 
-**<https://github.com/Skitionek/notify-microsoft-teams>**
+**[Skitionek/notify-microsoft-teams](https://github.com/Skitionek/notify-microsoft-teams)**
 
 **More projects:** [github.com/Skitionek](https://github.com/Skitionek)
 
