@@ -98,7 +98,13 @@ tooling
 
 **[Skitionek/mycelium](https://github.com/Skitionek/mycelium)**
 
+- Open-source project focused on reusable tooling and ongoing software
+  experiments.
+
 **[Skitionek/notify-microsoft-teams](https://github.com/Skitionek/notify-microsoft-teams)**
+
+- Utility for sending automated notifications to Microsoft Teams
+  channels.
 
 **More projects:** [github.com/Skitionek](https://github.com/Skitionek)
 
