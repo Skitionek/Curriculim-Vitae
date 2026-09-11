@@ -10,27 +10,43 @@ Copenhagen, Denmark
 
 # Profile
 
-Senior Software Engineer with 9+ years of experience building
-data-intensive platforms in the bioinformatics domain. I specialize in
-scalable data architectures and developer tooling, with strong ownership
-of production systems — including authoring the majority of a complex
-scientific platform. I bridge research and engineering by turning
-complex data workflows into reliable, maintainable systems.
+Senior Software Engineer with 10 years of experience building
+data-intensive platforms and reliable compute infrastructure. Holding a
+double M.Sc. in Electrical Engineering (DTU & KAIST), I combine a strong
+foundational engineering mindset with modern cloud architecture,
+distributed systems, and platform operations. Proven track record of
+taking full ownership of production platforms, leading infrastructure
+migrations, and optimizing developer tooling.
 
 # Core Competencies
 
-- Scalable data platforms (distributed systems, multi-database
-  architectures)
+- **Infrastructure & Cloud:** Linux Administration, Kubernetes, Docker,
+  Azure, Google Cloud, CI/CD, Bash/Shell
 
-- Bioinformatics and scientific software development
+- **Data & Systems Architecture:** Distributed systems, multi-database
+  architectures (PostgreSQL, Neo4j, ArangoDB, Redis)
 
-- Full-stack development (TypeScript, Python, Angular, React)
+- **Software Development:** Python, TypeScript, SQL, Angular, React,
+  Flask
 
-- Knowledge graphs and data modeling (Neo4j, ArangoDB)
+- **Operations & Tooling:** Workflow automation (Nextflow), system
+  monitoring, technical documentation, operational reliability
 
-- Cloud infrastructure (Kubernetes, Azure, Google Cloud)
+# Education
 
-- Developer tooling and workflow optimization (Nextflow ecosystem)
+**M.Sc. Electrical and Electronics Engineering (Double Degree)** –
+2018  
+KAIST & Technical University of Denmark (DTU)
+
+- Focus: Embedded Systems, Signal Processing, Distributed Systems, Data
+  Engineering.
+
+**B.Sc. Electrical Engineering** – 2016  
+Gdańsk University of Technology & Karlsruhe Institute of Technology
+(KIT)
+
+- Focus: Control Systems, Microcontrollers, Systems Engineering, Applied
+  Mathematics.
 
 # Professional Experience
 
