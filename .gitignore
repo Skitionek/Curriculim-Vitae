@@ -5,3 +5,6 @@
 *.synctex.gz
 *.up?
 _site/
+main.fls
+main.fdb_latexmk
+main.xdv
