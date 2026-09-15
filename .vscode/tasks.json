@@ -7,6 +7,28 @@
       "command": "./scripts/compile-github-page.sh",
       "group": "build",
       "problemMatcher": []
+    },
+    {
+      "label": "Compile PDF",
+      "detail": "latexmk -pdfxe (same as CI); falls back to a TeX Live container if latexmk is not installed",
+      "type": "shell",
+      "command": "if command -v latexmk >/dev/null; then latexmk -pdfxe -interaction=nonstopmode main.tex; else ${CONTAINER_ENGINE:-$(command -v podman || command -v docker)} run --rm -v \"${workspaceFolder}\":/workdir:Z -w /workdir docker.io/texlive/texlive:latest latexmk -pdfxe -interaction=nonstopmode main.tex; fi",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Clean LaTeX build files",
+      "type": "shell",
+      "command": "if command -v latexmk >/dev/null; then latexmk -C main.tex; else rm -f main.aux main.log main.out main.pdf main.fls main.fdb_latexmk main.xdv main.synctex.gz; fi",
+      "problemMatcher": []
     }
   ]
 }
